@@ -124,15 +124,15 @@ header .btn{padding:12px 22px;font-size:15px}
 
 /* kits */
 .kits{background:var(--bg2)}
-.kit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.kit-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .kit{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px 24px;display:flex;flex-direction:column;gap:6px;transition:transform .2s, border-color .2s}
 .kit:hover{transform:translateY(-4px);border-color:var(--pink)}
 .kit.best{background:linear-gradient(180deg,#3A1630,#24151F);border:2px solid var(--pink);box-shadow:0 20px 50px -18px rgba(255,65,155,.55)}
-.kit .flag{position:absolute;top:-14px;left:24px;background:var(--yellow);color:var(--ink);font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:5px 12px}
-.kit .qty{font-family:'Fraunces',serif;font-size:58px;font-weight:700;line-height:1;color:#fff}
+.kit .flag{position:absolute;top:-14px;left:16px;white-space:nowrap;background:var(--yellow);color:var(--ink);font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:5px 12px}
+.kit .qty{font-family:'Fraunces',serif;font-size:52px;font-weight:700;line-height:1;color:#fff}
 .kit .qty span{font-family:'Nunito',sans-serif;font-size:18px;font-weight:800;color:var(--muted);margin-left:6px}
 .kit .from{color:var(--muted);text-decoration:line-through;font-weight:700;margin-top:14px}
-.kit .to{font-family:'Fraunces',serif;font-size:40px;font-weight:700;color:var(--pink);line-height:1.05}
+.kit .to{font-family:'Fraunces',serif;font-size:36px;font-weight:700;color:var(--pink);line-height:1.05}
 .kit .to small{font-size:20px;margin-right:2px}
 .kit .unit{font-weight:800;font-size:15px;color:var(--text)}
 .kit .save{display:inline-block;align-self:flex-start;background:rgba(255,65,155,.14);color:var(--pinkSoft);font-weight:900;font-size:13px;border-radius:999px;padding:5px 12px;margin:10px 0 18px}
@@ -224,6 +224,9 @@ footer .priv{max-width:520px}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.strip-track{animation:none}html{scroll-behavior:auto}}
 
 /* responsivo */
+@media (max-width:1180px){
+  .kit-grid{grid-template-columns:repeat(3,1fr)}
+}
 @media (max-width:1020px){
   .kit-grid{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(2,1fr)}
@@ -357,6 +360,14 @@ footer .priv{max-width:520px}
       <p>Escolha o kit, mande as fotos pelo WhatsApp e aprove a prévia. Cada ímã tem 5x5 cm, acabamento brilhante e ímã forte.</p>
     </div>
     <div class="kit-grid">
+      <article class="kit reveal">
+        <div class="qty">4<span>ímãs</span></div>
+        <div class="from">De R$ 49,90</div>
+        <div class="to"><small>R$</small>44,90</div>
+        <div class="unit">R$ 11,23 por ímã</div>
+        <span class="save">10% off · Economize R$ 5</span>
+        <a class="btn btn-pink" href="#" data-wa="Oi! Quero o Kit 4 foto-ímãs da Black Friday (R$ 44,90).">Escolher kit 4</a>
+      </article>
       <article class="kit reveal">
         <div class="qty">6<span>ímãs</span></div>
         <div class="from">De R$ 69,90</div>
@@ -531,7 +542,7 @@ footer .priv{max-width:520px}
 </a>
 
 <div class="mbar">
-  <div class="info">Kits a partir de R$ 59,90<small>Black Friday · 27 a 30/11</small></div>
+  <div class="info">Kits a partir de R$ 44,90<small>Black Friday · 27 a 30/11</small></div>
   <a class="btn btn-pink" href="#" data-wa="Oi! Vi a Black Friday da Memo Click no site e quero fazer um pedido.">Pedir agora</a>
 </div>
 
